@@ -31,8 +31,8 @@
                     <!-- Official Credentials Badge -->
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1 font-mono text-xs">
                         <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 shadow-sm flex items-center gap-1.5">
-                            <span class="text-emerald-500 font-bold">✓</span>
-                            <span>Sertifikasi BNSP: Pengembang Web Pratama</span>
+                            <span class="text-emerald-500 font-bold">🎓</span>
+                            <span>{{ $profile['degree_badge'] }}</span>
                         </span>
                         <span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 shadow-sm flex items-center gap-1.5">
                             <span>📍</span>
@@ -42,11 +42,11 @@
 
                     <!-- Action CTAs -->
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-3">
-                        <a href="{{ $profile['resume'] }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-2 group">
+                        <a href="{{ $profile['portfolio'] }}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-2 group">
                             <svg class="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
-                            <span>Unduh CV / Resume</span>
+                            <span>Portofolio Canva ↗</span>
                         </a>
                         <a href="#projects" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 text-slate-700 dark:text-slate-200 font-mono text-xs font-medium transition-all flex items-center gap-2">
                             <span>Jelajahi Proyek</span>
@@ -66,7 +66,7 @@
                 <!-- Avatar Card -->
                 <div class="shrink-0 group">
                     <div class="relative p-1.5 rounded-2xl bg-gradient-to-b from-emerald-500/50 via-slate-200 to-slate-300 dark:via-slate-800 dark:to-slate-900 shadow-xl transition-all duration-300 group-hover:shadow-emerald-500/15">
-                        <div class="w-40 sm:w-48 aspect-[3/4] rounded-xl overflow-hidden relative border border-slate-200 dark:border-slate-700/60 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200 dark:from-[#0f172a] dark:via-[#090f1d] dark:to-[#050912]">
+                        <div class="w-44 sm:w-52 aspect-[3/4] rounded-xl overflow-hidden relative border border-slate-200 dark:border-slate-700/60 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200 dark:from-[#0f172a] dark:via-[#090f1d] dark:to-[#050912]">
                             <!-- Ambient Lighting Spotlight -->
                             <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-44 h-44 rounded-full bg-emerald-500/15 blur-2xl pointer-events-none"></div>
                             <!-- Cutout Portrait -->
@@ -74,6 +74,25 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHT METRICS SECTION -->
+        <section class="reveal-on-scroll">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                @foreach ($metrics as $metric)
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm text-center md:text-left space-y-1 hover:border-emerald-500/40 transition-colors">
+                        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                            {{ $metric['value'] }}
+                        </div>
+                        <div class="font-bold text-slate-800 dark:text-slate-100 text-xs sm:text-sm">
+                            {{ $metric['label'] }}
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-mono leading-tight">
+                            {{ $metric['description'] }}
+                        </p>
+                    </div>
+                @endforeach
             </div>
         </section>
 
@@ -92,15 +111,16 @@
             </div>
 
             <!-- Skills Breakdown Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 @foreach ($about['hard_skills'] as $category => $items)
-                    <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2.5">
-                        <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                            {{ $category }}
+                    <div class="p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+                        <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            <span>{{ $category }}</span>
                         </h3>
                         <div class="flex flex-wrap gap-1.5">
                             @foreach ($items as $item)
-                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono text-xs">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono text-xs border border-slate-200/50 dark:border-slate-750">
                                     {{ $item }}
                                 </span>
                             @endforeach
@@ -108,14 +128,14 @@
                     </div>
                 @endforeach
 
-                <!-- Soft skills card (Spans full on small) -->
-                <div class="sm:col-span-2 md:col-span-3 p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
+                <!-- Soft skills card (Spans full on grid) -->
+                <div class="sm:col-span-2 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2.5">
                     <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                        Keahlian Lunak (Soft Skills)
+                        Keahlian Pendukung & Kepemimpinan (Soft Skills)
                     </h3>
                     <div class="flex flex-wrap gap-2">
                         @foreach ($about['soft_skills'] as $skill)
-                            <span class="px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-xs">
+                            <span class="px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-xs bg-slate-50/50 dark:bg-slate-800/40">
                                 ✦ {{ $skill }}
                             </span>
                         @endforeach
@@ -134,7 +154,7 @@
 
             <div class="space-y-6">
                 @foreach ($experiences as $exp)
-                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
                         <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-3 border-b border-slate-100 dark:border-slate-800/80">
                             <div>
                                 <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
@@ -144,13 +164,13 @@
                                     {{ $exp['company'] }} <span class="text-slate-400 font-normal">· {{ $exp['location'] }}</span>
                                 </p>
                             </div>
-                            <span class="font-mono text-xs text-slate-500 dark:text-slate-400">
+                            <span class="font-mono text-xs text-slate-500 dark:text-slate-400 shrink-0">
                                 {{ $exp['period'] }}
                             </span>
                         </div>
 
                         <!-- Bullets -->
-                        <ul class="space-y-3 font-mono text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                        <ul class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                             @foreach ($exp['bullets'] as $bullet)
                                 <li class="flex items-start gap-2.5 leading-relaxed">
                                     <span class="text-emerald-500 font-bold shrink-0 mt-0.5">▹</span>
@@ -162,7 +182,7 @@
                         <!-- Tech tags -->
                         <div class="flex flex-wrap gap-2 pt-2">
                             @foreach ($exp['tags'] as $tag)
-                                <span class="font-mono text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-md">
+                                <span class="font-mono text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-md border border-emerald-500/20">
                                     {{ $tag }}
                                 </span>
                             @endforeach
@@ -172,36 +192,36 @@
             </div>
         </section>
 
-        <!-- SECTION 03: PROYEK UNGGULAN (INTERACTIVE LIST / TIMELINE) -->
-        <section id="projects" class="space-y-6 scroll-mt-24 reveal-on-scroll" x-data="{ expanded: null }">
+        <!-- SECTION 03: PROYEK & KARYA UNGGULAN -->
+        <section id="projects" class="space-y-6 scroll-mt-24 reveal-on-scroll" x-data="{ expanded: 0 }">
             <div class="flex items-center justify-between gap-4">
                 <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white flex-grow">
                     <span class="text-emerald-600 dark:text-emerald-400">03.</span>
-                    <span>Proyek Unggulan</span>
+                    <span>Proyek & Studi Kasus</span>
                     <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
                 </h2>
                 <span class="font-mono text-xs text-slate-400 shrink-0">
-                    {{ count($projects) }} Proyek Terpilih
+                    {{ count($projects) }} Studi Kasus
                 </span>
             </div>
 
             <p class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400">
-                Klik pada salah satu proyek di bawah untuk melihat rincian arsitektur teknis dan implementasinya:
+                Klik pada masing-masing studi kasus untuk melihat rincian metodologi, visualisasi, dan dampak terukurnya:
             </p>
 
             <!-- Interactive Accordion List -->
             <div class="divide-y divide-slate-200 dark:divide-slate-800 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
                 @foreach ($projects as $index => $project)
-                    <div class="transition-colors" :class="expanded === {{ $index }} ? 'bg-slate-50/70 dark:bg-slate-800/40' : ''">
+                    <div class="transition-colors" :class="expanded === {{ $index }} ? 'bg-slate-50/70 dark:bg-slate-850/40' : ''">
                         <!-- Clickable Header Row -->
                         <button @click="expanded = expanded === {{ $index }} ? null : {{ $index }}" 
                                 type="button" 
                                 class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors focus:outline-none">
                             <div class="flex items-center gap-3.5 min-w-0">
-                                <span class="text-xl shrink-0">{{ $project['icon'] }}</span>
+                                <span class="text-2xl shrink-0">{{ $project['icon'] }}</span>
                                 <div class="min-w-0">
                                     <div class="flex items-center gap-2 flex-wrap">
-                                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base truncate">
+                                        <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
                                             {{ $project['title'] }}
                                         </h3>
                                         <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
@@ -230,9 +250,32 @@
                         <div x-show="expanded === {{ $index }}" 
                              x-cloak 
                              x-collapse 
-                             class="px-5 pb-5 pt-1 border-t border-slate-100 dark:border-slate-800/60 space-y-4">
+                             class="px-5 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800/60 space-y-4">
+
+                            @if (!empty($project['image']))
+                                <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 max-h-80 bg-slate-950">
+                                    <img src="{{ $project['image'] }}" alt="{{ $project['title'] }}" class="w-full h-full object-cover">
+                                </div>
+                            @endif
+
+                            <!-- Metrics Pills if present -->
+                            @if (!empty($project['metrics']))
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                                    @foreach ($project['metrics'] as $m)
+                                        <div class="p-3 rounded-lg bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-500/20 text-center">
+                                            <div class="font-mono font-bold text-sm text-emerald-700 dark:text-emerald-300">
+                                                {{ $m['val'] }}
+                                            </div>
+                                            <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase mt-0.5">
+                                                {{ $m['label'] }}
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
+
                             <div class="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50">
-                                <p class="font-mono text-xs uppercase tracking-wider text-slate-400 mb-1">Rincian Teknis & Implementasi:</p>
+                                <p class="font-mono text-xs uppercase tracking-wider text-slate-400 mb-1">Rincian Metodologi & Eksekusi:</p>
                                 <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-mono">
                                     {{ $project['description'] }}
                                 </p>
@@ -240,7 +283,7 @@
 
                             <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
                                 <div class="flex flex-wrap items-center gap-1.5">
-                                    <span class="text-xs font-mono text-slate-400 mr-1">Teknologi:</span>
+                                    <span class="text-xs font-mono text-slate-400 mr-1">Metode & Alat:</span>
                                     @foreach ($project['tech'] as $t)
                                         <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono text-xs">
                                             {{ $t }}
@@ -249,7 +292,7 @@
                                 </div>
 
                                 <span class="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-                                    <span>●</span> Diimplementasikan dalam produksi
+                                    <span>●</span> Diimplementasikan dalam lingkungan manufaktur
                                 </span>
                             </div>
                         </div>
@@ -258,11 +301,11 @@
             </div>
         </section>
 
-        <!-- SECTION 04: PENDIDIKAN & SERTIFIKASI -->
+        <!-- SECTION 04: PENDIDIKAN & PENGALAMAN LAINNYA -->
         <section id="education" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">04.</span>
-                <span>Pendidikan & Sertifikasi</span>
+                <span>Pendidikan & Pengalaman Lainnya</span>
                 <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
             </h2>
 
@@ -286,11 +329,11 @@
                     </div>
 
                     <div class="inline-block px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-mono text-xs font-semibold">
-                        IPK: {{ $education['gpa'] }}
+                        IPK: {{ $education['gpa'] }} (Cum Laude)
                     </div>
 
                     <div class="pt-2 border-t border-slate-100 dark:border-slate-800 text-xs font-mono text-slate-600 dark:text-slate-300">
-                        <span class="font-bold text-slate-700 dark:text-slate-200">Proyek Akhir:</span> {{ $education['final_project'] }}
+                        <span class="font-bold text-slate-700 dark:text-slate-200">Tugas Akhir:</span> {{ $education['final_project'] }}
                     </div>
                 </div>
 
@@ -315,17 +358,17 @@
                 </div>
             </div>
 
-            <!-- Leadership & Organization -->
+            <!-- Additional Experience & Leadership -->
             <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
                 <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                    Pengalaman Organisasi & Kepemimpinan
+                    Pengalaman Tambahan & Kepemimpinan Organisasi
                 </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1 font-mono text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 font-mono text-xs">
                     @foreach ($organizations as $org)
                         <div class="space-y-1 border-l-2 border-emerald-500/50 pl-3">
                             <p class="font-bold text-slate-800 dark:text-slate-200">{{ $org['role'] }}</p>
-                            <p class="text-slate-500 dark:text-slate-400">{{ $org['org'] }}</p>
-                            <p class="text-[11px] text-emerald-600 dark:text-emerald-400">{{ $org['period'] }}</p>
+                            <p class="text-emerald-600 dark:text-emerald-400 font-semibold">{{ $org['org'] }} <span class="text-slate-400 font-normal">({{ $org['period'] }})</span></p>
+                            <p class="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed pt-0.5">{{ $org['description'] }}</p>
                         </div>
                     @endforeach
                 </div>
@@ -333,7 +376,7 @@
         </section>
 
         <!-- SECTION 05: KONTAK -->
-        <section id="contact" class="py-8 scroll-mt-24 space-y-8 reveal-on-scroll" x-data="{ openDirectForm: false }">
+        <section id="contact" class="py-8 scroll-mt-24 space-y-8 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">05.</span>
                 <span>Kontak & Kolaborasi</span>
@@ -344,7 +387,7 @@
                 <!-- Direct Contact Details -->
                 <div class="space-y-5 font-mono text-xs sm:text-sm">
                     <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-sans text-sm">
-                        Terbuka untuk diskusi teknis, kolaborasi pengembangan sistem web pemerintahan maupun komersial, atau peluang kerja sama profesional.
+                        Terbuka untuk peluang karier profesional di bidang Production Engineering, Production Planning & Control (PPIC), Lean Manufacturing, atau diskusi seputar optimasi operasional manufaktur.
                     </p>
 
                     <div class="space-y-3">
@@ -379,11 +422,24 @@
                             <div>
                                 <p class="text-[10px] text-slate-400 uppercase">LinkedIn</p>
                                 <a href="{{ $profile['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-900 dark:text-white hover:text-emerald-500">
-                                    in/bagasalif
+                                    linkedin.com/in/tamarahu
                                 </a>
                             </div>
                             <a href="{{ $profile['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
                                 Buka Profil ↗
+                            </a>
+                        </div>
+
+                        <!-- Portfolio Canva -->
+                        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase">Portofolio Canva</p>
+                                <a href="{{ $profile['portfolio'] }}" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-900 dark:text-white hover:text-emerald-500">
+                                    canva.link/portofolio-tamara-hanum-u
+                                </a>
+                            </div>
+                            <a href="{{ $profile['portfolio'] }}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
+                                Buka Portofolio ↗
                             </a>
                         </div>
 
@@ -447,8 +503,8 @@
                             if (!this.validate()) return;
                             this.logToDatabase();
                             this.successNotice = true;
-                            const text = `Halo Bagas Alif,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n(Dikirim melalui bagasalif.my.id)`;
-                            const url = `https://wa.me/6281269907315?text=${encodeURIComponent(text)}`;
+                            const text = `Halo Tamara Hanum,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n(Dikirim melalui Portofolio Tamara Hanum)`;
+                            const url = `https://wa.me/{{ $profile['phone_digits'] }}?text=${encodeURIComponent(text)}`;
                             window.open(url, '_blank');
                         },
 
@@ -457,8 +513,8 @@
                             this.logToDatabase();
                             this.successNotice = true;
                             const subject = `Pesan Portofolio dari ${this.name}`;
-                            const body = `Halo Bagas Alif,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n---\nDikirim melalui bagasalif.my.id`;
-                            const mailtoUrl = `mailto:bagasalif19@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                            const body = `Halo Tamara Hanum,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n---\nDikirim melalui Portofolio Tamara Hanum`;
+                            const mailtoUrl = `mailto:{{ $profile['email'] }}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                             window.location.href = mailtoUrl;
                         }
                      }">
@@ -488,19 +544,19 @@
                     <div class="space-y-3.5">
                         <div class="space-y-1">
                             <label for="contact-name" class="block font-semibold text-slate-700 dark:text-slate-300">Nama Anda *</label>
-                            <input type="text" id="contact-name" x-model="name" placeholder="misal: Rian Syahputra" 
+                            <input type="text" id="contact-name" x-model="name" placeholder="misal: Hendra Wijaya" 
                                    class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500">
                         </div>
 
                         <div class="space-y-1">
                             <label for="contact-email" class="block font-semibold text-slate-700 dark:text-slate-300">Email Anda *</label>
-                            <input type="email" id="contact-email" x-model="email" placeholder="rian@example.com" 
+                            <input type="email" id="contact-email" x-model="email" placeholder="hendra@company.com" 
                                    class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500">
                         </div>
 
                         <div class="space-y-1">
                             <label for="contact-message" class="block font-semibold text-slate-700 dark:text-slate-300">Pesan / Diskusi *</label>
-                            <textarea id="contact-message" x-model="message" rows="3" placeholder="Tuliskan pesan atau keperluan Anda..." 
+                            <textarea id="contact-message" x-model="message" rows="3" placeholder="Tuliskan pesan, penawaran kerja sama, atau keperluan diskusi Anda..." 
                                       class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 resize-none"></textarea>
                         </div>
 

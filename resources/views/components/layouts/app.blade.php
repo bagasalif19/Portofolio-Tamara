@@ -14,27 +14,27 @@
         }
     </script>
 
-    <title>{{ $title ?? 'Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer' }}</title>
-    <meta name="description" content="Portfolio of Bagas Alif Muhammad Nasution, S.Kom - Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer.">
-    <meta name="author" content="Bagas Alif Muhammad Nasution">
+    <title>{{ $title ?? 'Tamara Hanum Ulinnuha, S.T. | Industrial Engineer & Production Specialist' }}</title>
+    <meta name="description" content="Portfolio of Tamara Hanum Ulinnuha, S.T. - Industrial Engineering graduate from Universitas Islam Indonesia. Management Trainee – Production at PT Shoenary Javanesia Inc (KMK Group). Specializing in Production Planning, Line Balancing, and Lean Manufacturing.">
+    <meta name="author" content="Tamara Hanum Ulinnuha">
 
     <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bagasalif.my.id">
-    <meta property="og:title" content="Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer">
-    <meta property="og:description" content="Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer specializing in Laravel, PHP, and modern web applications.">
-    <meta property="og:image" content="{{ asset('images/bagas_alif.jpg') }}">
+    <meta property="og:url" content="https://canva.link/portofolio-tamara-hanum-u">
+    <meta property="og:title" content="Tamara Hanum Ulinnuha, S.T. | Industrial Engineer & Production Specialist">
+    <meta property="og:description" content="Industrial Engineering graduate from UII (GPA 3.80/4.00). Management Trainee – Production at PT Shoenary Javanesia Inc (KMK Group). Proficient in Lean Manufacturing, VSM, Kaizen, SPC, and SAP.">
+    <meta property="og:image" content="{{ asset('images/tamara_portrait.jpg') }}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bagas Alif Muhammad Nasution, S.Kom | Full-Stack Developer">
-    <meta name="twitter:description" content="Full-Stack Developer @ Dinas Kominfo Deli Serdang. BNSP Certified Web Developer.">
-    <meta name="twitter:image" content="{{ asset('images/bagas_alif.jpg') }}">
+    <meta name="twitter:title" content="Tamara Hanum Ulinnuha, S.T. | Industrial Engineer">
+    <meta name="twitter:description" content="Production Engineering, Line Balancing, and Lean Manufacturing Specialist.">
+    <meta name="twitter:image" content="{{ asset('images/tamara_portrait.jpg') }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo-bam.png') }}?v=2">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}?v=2">
-    <link rel="apple-touch-icon" href="{{ asset('images/logo-bam.png') }}?v=2">
+    <link rel="icon" type="image/jpg" href="{{ asset('images/tamara_portrait.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('images/tamara_portrait.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/tamara_portrait.jpg') }}">
 
     <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,15 +93,15 @@
          }"
          :class="{ 'opacity-0 pointer-events-none -translate-y-4': loaded }">
 
-        <!-- Top Header (Logo BAM & Label) -->
+        <!-- Top Header (Logo THU & Label) -->
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-                <div class="h-7 w-7 flex items-center justify-center">
-                    <img src="{{ asset('images/logo-bam-white.png') }}" alt="BAM Logo" class="h-full w-full object-contain">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20 text-white font-mono font-bold text-xs">
+                    THU
                 </div>
-                <span class="font-mono text-xs font-bold tracking-wider text-slate-300">BAM</span>
+                <span class="font-mono text-xs font-bold tracking-wider text-slate-300">TAMARA HANUM</span>
             </div>
-            <span class="font-mono text-[11px] text-slate-500 tracking-wider">PORTFOLIO '26</span>
+            <span class="font-mono text-[11px] text-slate-500 tracking-wider">PORTFOLIO · INDUSTRIAL ENGINEERING</span>
         </div>
 
         <!-- Center: Bold Digital Percentage & Glowing Dot -->
@@ -118,7 +118,7 @@
         <!-- Bottom: Ultra-thin Progress Line & Status -->
         <div class="space-y-3">
             <div class="flex justify-between items-center font-mono text-[11px] text-slate-500">
-                <span>BAGAS ALIF MUHAMMAD NASUTION</span>
+                <span>TAMARA HANUM ULINNUHA, S.T.</span>
                 <span class="text-emerald-400" x-text="progress === 100 ? 'READY' : 'INITIALIZING...'"></span>
             </div>
             <div class="w-full h-[2px] bg-slate-800/80 rounded-full overflow-hidden">
@@ -130,22 +130,23 @@
 
     <!-- Fixed Left Sidebar: Social Links (Desktop) -->
     <div class="fixed bottom-0 left-6 lg:left-12 hidden md:flex flex-col items-center gap-6 z-40">
-        <a href="https://github.com/bagasalif19" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="GitHub">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/bagasalif" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/tamarahu" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="LinkedIn">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
         </a>
-        <a href="https://wa.me/6281269907315" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="WhatsApp">
+        <a href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="Canva Portfolio">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+        </a>
+        <a href="https://wa.me/6282234221320" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="WhatsApp">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
             </svg>
         </a>
-        <a href="mailto:bagasalif19@gmail.com" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="Email">
+        <a href="mailto:tamarahanumu@gmail.com" class="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:-translate-y-1 transition-all" aria-label="Email">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -156,7 +157,7 @@
     <!-- Fixed Right Sidebar: Location Text (Desktop) -->
     <div class="fixed bottom-0 right-6 lg:right-12 hidden md:flex flex-col items-center gap-6 z-40">
         <div class="font-mono text-xs text-slate-500 dark:text-slate-400 tracking-wider hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors [writing-mode:vertical-rl] select-none">
-            📍 Medan, Sumatera Utara
+            📍 Temanggung, Jawa Tengah
         </div>
         <div class="w-[1px] h-24 bg-slate-300 dark:bg-slate-700"></div>
     </div>
@@ -166,14 +167,13 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Brand Monogram (BAM Logo) -->
+                <!-- Brand Monogram (THU Logo) -->
                 <a href="#hero" class="group flex items-center gap-3 font-mono text-base tracking-tight hover:opacity-90 transition-opacity">
-                    <div class="h-7 w-7 sm:h-8 sm:w-8 shrink-0 flex items-center justify-center">
-                        <img src="{{ asset('images/logo-bam-white.png') }}" alt="BAM Logo" class="h-full w-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-110">
-                        <img src="{{ asset('images/logo-bam-dark.png') }}" alt="BAM Logo" class="h-full w-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-110">
+                    <div class="h-9 w-9 shrink-0 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-md shadow-emerald-500/20 text-white font-bold text-xs tracking-wider transition-transform duration-200 group-hover:scale-105">
+                        THU
                     </div>
                     <div class="flex items-center gap-1 font-bold text-slate-900 dark:text-white">
-                        <span>bagas.alif</span>
+                        <span>tamara.hanum</span>
                         <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse ml-0.5"></span>
                     </div>
                 </a>
@@ -186,12 +186,12 @@
                     <a href="#education" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pendidikan & Sertifikasi</a>
                     <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontak</a>
 
-                    <!-- Resume Button -->
-                    <a href="{{ asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf') }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5">
+                    <!-- Resume / Portfolio Button -->
+                    <a href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5">
                         <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
-                        <span>CV / Resume</span>
+                        <span>Portofolio Canva ↗</span>
                     </a>
 
                     <!-- Dark/Light Theme Toggle -->
@@ -242,8 +242,8 @@
             <a @click="mobileMenuOpen = false" href="#education" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Pendidikan & Sertifikasi</a>
             <a @click="mobileMenuOpen = false" href="#contact" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Kontak</a>
             <div class="pt-2">
-                <a @click="mobileMenuOpen = false" href="{{ asset('documents/CV-Bagas-Alif-Muhammad-Nasution.pdf') }}" target="_blank" download="CV-Bagas-Alif-Muhammad-Nasution.pdf" class="block text-center py-2.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 font-semibold">
-                    📥 Unduh CV / Resume
+                <a @click="mobileMenuOpen = false" href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 font-semibold">
+                    📂 Buka Portofolio Canva ↗
                 </a>
             </div>
         </div>
@@ -265,8 +265,8 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center font-mono text-xs text-slate-500 dark:text-slate-400 space-y-2">
-        <p>👨‍💻 Dirancang & Dibangun oleh <span class="text-slate-800 dark:text-slate-200 font-semibold">Bagas Alif Muhammad Nasution</span></p>
-        <p>Ditenagai oleh <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Laravel</span> & <span class="text-cyan-600 dark:text-cyan-400 font-semibold">Tailwind CSS</span> · Medan, Indonesia</p>
+        <p>⚙️ Dirancang untuk <span class="text-slate-800 dark:text-slate-200 font-semibold">Tamara Hanum Ulinnuha, S.T.</span></p>
+        <p>Industrial Engineering & Operations Specialist · UII Alumna · Temanggung, Central Java, Indonesia</p>
     </footer>
 
 </body>

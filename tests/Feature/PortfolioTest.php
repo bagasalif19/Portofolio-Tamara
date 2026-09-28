@@ -10,16 +10,16 @@ class PortfolioTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * Test portfolio home page loads successfully.
+     * Test portfolio home page loads successfully with Tamara Hanum's information.
      */
     public function test_portfolio_page_loads_successfully(): void
     {
         $response = $this->get(route('portfolio.index'));
 
         $response->assertStatus(200);
-        $response->assertSee('Bagas Alif Muhammad Nasution');
-        $response->assertSee('Dinas Kominfo Deli Serdang');
-        $response->assertSee('Website Desa se-Kabupaten Deli Serdang');
+        $response->assertSee('Tamara Hanum Ulinnuha, S.T.');
+        $response->assertSee('PT Shoenary Javanesia Inc');
+        $response->assertSee('Value Stream Mapping &amp; Kaizen Line Balancing Optimization', false);
     }
 
     /**
@@ -30,8 +30,8 @@ class PortfolioTest extends TestCase
         $data = [
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'subject' => 'Project Inquiry',
-            'message' => 'Hello Bagas, I would love to discuss a new Laravel project with you.',
+            'subject' => 'Manufacturing Consultation Inquiry',
+            'message' => 'Hello Tamara, I would love to discuss a Lean production project with you.',
         ];
 
         $response = $this->post(route('portfolio.contact'), $data);
@@ -40,7 +40,7 @@ class PortfolioTest extends TestCase
         $this->assertDatabaseHas('contact_messages', [
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'subject' => 'Project Inquiry',
+            'subject' => 'Manufacturing Consultation Inquiry',
         ]);
     }
 
