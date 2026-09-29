@@ -168,8 +168,8 @@
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Brand Monogram (THU Logo) -->
-                <a href="#hero" class="group flex items-center gap-3 font-mono text-base tracking-tight hover:opacity-90 transition-opacity">
-                    <div class="h-9 w-9 shrink-0 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-md shadow-emerald-500/20 text-white font-bold text-xs tracking-wider transition-transform duration-200 group-hover:scale-105">
+                <a href="#hero" class="group flex items-center gap-2.5 sm:gap-3 font-mono text-base tracking-tight hover:opacity-90 transition-opacity shrink-0">
+                    <div class="h-7 w-7 sm:h-8 sm:w-8 shrink-0 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-md shadow-emerald-500/20 text-white font-bold text-xs tracking-wider transition-transform duration-200 group-hover:scale-105">
                         THU
                     </div>
                     <div class="flex items-center gap-1 font-bold text-slate-900 dark:text-white">
@@ -179,16 +179,16 @@
                 </a>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-mono text-xs text-slate-700 dark:text-slate-300">
-                    <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Tentang</a>
-                    <a href="#experience" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pengalaman</a>
-                    <a href="#projects" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Proyek</a>
-                    <a href="#education" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pendidikan & Sertifikasi</a>
-                    <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontak</a>
+                <nav class="hidden md:flex items-center gap-5 lg:gap-8 font-mono text-xs text-slate-700 dark:text-slate-300">
+                    <a href="#about" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Tentang</a>
+                    <a href="#experience" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pengalaman</a>
+                    <a href="#projects" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Proyek</a>
+                    <a href="#education" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pendidikan & Sertifikasi</a>
+                    <a href="#contact" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontak</a>
 
                     <!-- Resume / Portfolio Button -->
-                    <a href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5">
-                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <a href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
                         <span>Portofolio Canva ↗</span>
