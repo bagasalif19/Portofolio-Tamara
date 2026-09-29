@@ -70,7 +70,7 @@
                             <!-- Ambient Lighting Spotlight -->
                             <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-44 h-44 rounded-full bg-emerald-500/15 blur-2xl pointer-events-none"></div>
                             <!-- Cutout Portrait -->
-                            <img src="{{ $profile['avatar'] }}" alt="{{ $profile['name'] }}" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 relative z-10">
+                            <img src="{{ $profile['avatar'] }}" alt="{{ $profile['name'] }}" class="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105 relative z-10">
                         </div>
                     </div>
                 </div>
