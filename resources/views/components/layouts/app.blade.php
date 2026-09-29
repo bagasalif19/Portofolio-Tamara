@@ -32,9 +32,9 @@
     <meta name="twitter:image" content="{{ asset('images/tamara_portrait.jpg') }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="{{ asset('images/tamara_portrait.jpg') }}">
-    <link rel="shortcut icon" href="{{ asset('images/tamara_portrait.jpg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/tamara_portrait.jpg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-thu-white.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo-thu-white.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo-thu-white.png') }}">
 
     <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,10 +96,10 @@
         <!-- Top Header (Logo THU & Label) -->
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-                <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20 text-white font-mono font-bold text-xs">
-                    THU
+                <div class="h-7 w-7 flex items-center justify-center">
+                    <img src="{{ asset('images/logo-thu-white.png') }}" alt="THU Logo" class="h-full w-full object-contain">
                 </div>
-                <span class="font-mono text-xs font-bold tracking-wider text-slate-300">TAMARA HANUM</span>
+                <span class="font-mono text-xs font-bold tracking-wider text-slate-300">THU</span>
             </div>
             <span class="font-mono text-[11px] text-slate-500 tracking-wider">PORTFOLIO · INDUSTRIAL ENGINEERING</span>
         </div>
@@ -169,8 +169,9 @@
                 
                 <!-- Brand Monogram (THU Logo) -->
                 <a href="#hero" class="group flex items-center gap-2.5 sm:gap-3 font-mono text-base tracking-tight hover:opacity-90 transition-opacity shrink-0">
-                    <div class="h-7 w-7 sm:h-8 sm:w-8 shrink-0 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-md shadow-emerald-500/20 text-white font-bold text-xs tracking-wider transition-transform duration-200 group-hover:scale-105">
-                        THU
+                    <div class="h-7 w-7 sm:h-8 sm:w-8 shrink-0 flex items-center justify-center">
+                        <img src="{{ asset('images/logo-thu-white.png') }}" alt="THU Logo" class="h-full w-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-110">
+                        <img src="{{ asset('images/logo-thu-dark.png') }}" alt="THU Logo" class="h-full w-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-110">
                     </div>
                     <div class="flex items-center gap-1 font-bold text-slate-900 dark:text-white">
                         <span>tamara.hanum</span>
