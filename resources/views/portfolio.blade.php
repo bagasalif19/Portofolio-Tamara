@@ -46,10 +46,10 @@
                             <svg class="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
-                            <span>Portofolio Canva ↗</span>
+                            <span>Canva Portfolio ↗</span>
                         </a>
                         <a href="#projects" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 text-slate-700 dark:text-slate-200 font-mono text-xs font-medium transition-all flex items-center gap-2">
-                            <span>Jelajahi Proyek</span>
+                            <span>Explore Projects</span>
                             <span>↓</span>
                         </a>
                         <a href="{{ $profile['whatsapp'] }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-mono text-xs transition-colors flex items-center gap-1.5">
@@ -96,11 +96,11 @@
             </div>
         </section>
 
-        <!-- SECTION 01: TENTANG SAYA -->
+        <!-- SECTION 01: ABOUT ME -->
         <section id="about" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">01.</span>
-                <span>Tentang Saya</span>
+                <span>About Me</span>
                 <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
             </h2>
 
@@ -131,7 +131,7 @@
                 <!-- Soft skills card (Spans full on grid) -->
                 <div class="sm:col-span-2 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2.5">
                     <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                        Keahlian Pendukung & Kepemimpinan (Soft Skills)
+                        Leadership & Interpersonal Skills (Soft Skills)
                     </h3>
                     <div class="flex flex-wrap gap-2">
                         @foreach ($about['soft_skills'] as $skill)
@@ -144,11 +144,11 @@
             </div>
         </section>
 
-        <!-- SECTION 02: PENGALAMAN KERJA -->
+        <!-- SECTION 02: WORK EXPERIENCE -->
         <section id="experience" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">02.</span>
-                <span>Pengalaman Kerja</span>
+                <span>Work Experience</span>
                 <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
             </h2>
 
@@ -192,21 +192,21 @@
             </div>
         </section>
 
-        <!-- SECTION 03: PROYEK & KARYA UNGGULAN -->
+        <!-- SECTION 03: PROJECTS & CASE STUDIES -->
         <section id="projects" class="space-y-6 scroll-mt-24 reveal-on-scroll" x-data="{ expanded: 0 }">
             <div class="flex items-center justify-between gap-4">
                 <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white flex-grow">
                     <span class="text-emerald-600 dark:text-emerald-400">03.</span>
-                    <span>Proyek & Studi Kasus</span>
+                    <span>Projects & Case Studies</span>
                     <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
                 </h2>
                 <span class="font-mono text-xs text-slate-400 shrink-0">
-                    {{ count($projects) }} Studi Kasus
+                    {{ count($projects) }} Case Studies
                 </span>
             </div>
 
             <p class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400">
-                Klik pada masing-masing studi kasus untuk melihat rincian metodologi, visualisasi, dan dampak terukurnya:
+                Click on each case study to view methodology details, visualization, and measurable impact:
             </p>
 
             <!-- Interactive Accordion List -->
@@ -222,7 +222,7 @@
                                 <div class="min-w-0">
                                     <div class="flex items-center gap-2 flex-wrap">
                                         <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
-                                            {{ $project['title'] }}
+                                             {{ $project['title'] }}
                                         </h3>
                                         <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
                                             {{ $project['category'] }}
@@ -275,7 +275,7 @@
                             @endif
 
                             <div class="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50">
-                                <p class="font-mono text-xs uppercase tracking-wider text-slate-400 mb-1">Rincian Metodologi & Eksekusi:</p>
+                                <p class="font-mono text-xs uppercase tracking-wider text-slate-400 mb-1">Methodology & Execution:</p>
                                 <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-mono">
                                     {{ $project['description'] }}
                                 </p>
@@ -283,7 +283,7 @@
 
                             <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
                                 <div class="flex flex-wrap items-center gap-1.5">
-                                    <span class="text-xs font-mono text-slate-400 mr-1">Metode & Alat:</span>
+                                    <span class="text-xs font-mono text-slate-400 mr-1">Methods & Tools:</span>
                                     @foreach ($project['tech'] as $t)
                                         <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono text-xs">
                                             {{ $t }}
@@ -292,7 +292,7 @@
                                 </div>
 
                                 <span class="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-                                    <span>●</span> Diimplementasikan dalam lingkungan manufaktur
+                                    <span>●</span> Implemented in manufacturing environment
                                 </span>
                             </div>
                         </div>
@@ -301,11 +301,11 @@
             </div>
         </section>
 
-        <!-- SECTION 04: PENDIDIKAN & PENGALAMAN LAINNYA -->
+        <!-- SECTION 04: EDUCATION & LEADERSHIP -->
         <section id="education" class="space-y-6 scroll-mt-24 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">04.</span>
-                <span>Pendidikan & Pengalaman Lainnya</span>
+                <span>Education & Leadership</span>
                 <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
             </h2>
 
@@ -314,7 +314,7 @@
                 <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
                     <div class="flex items-center justify-between">
                         <span class="font-mono text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">
-                            Pendidikan Formal
+                            Formal Education
                         </span>
                         <span class="font-mono text-xs text-slate-400">{{ $education['period'] }}</span>
                     </div>
@@ -329,11 +329,11 @@
                     </div>
 
                     <div class="inline-block px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-mono text-xs font-semibold">
-                        IPK: {{ $education['gpa'] }} (Cum Laude)
+                        GPA: {{ $education['gpa'] }} (Cum Laude)
                     </div>
 
                     <div class="pt-2 border-t border-slate-100 dark:border-slate-800 text-xs font-mono text-slate-600 dark:text-slate-300">
-                        <span class="font-bold text-slate-700 dark:text-slate-200">Tugas Akhir:</span> {{ $education['final_project'] }}
+                        <span class="font-bold text-slate-700 dark:text-slate-200">Undergraduate Thesis:</span> {{ $education['final_project'] }}
                     </div>
                 </div>
 
@@ -361,7 +361,7 @@
             <!-- Additional Experience & Leadership -->
             <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
                 <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                    Pengalaman Tambahan & Kepemimpinan Organisasi
+                    Leadership & Organizational Experience
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 font-mono text-xs">
                     @foreach ($organizations as $org)
@@ -375,11 +375,11 @@
             </div>
         </section>
 
-        <!-- SECTION 05: KONTAK -->
+        <!-- SECTION 05: CONTACT & COLLABORATION -->
         <section id="contact" class="py-8 scroll-mt-24 space-y-8 reveal-on-scroll">
             <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white">
                 <span class="text-emerald-600 dark:text-emerald-400">05.</span>
-                <span>Kontak & Kolaborasi</span>
+                <span>Contact & Collaboration</span>
                 <span class="flex-grow h-[1px] bg-slate-200 dark:bg-slate-800"></span>
             </h2>
 
@@ -387,7 +387,7 @@
                 <!-- Direct Contact Details -->
                 <div class="space-y-5 font-mono text-xs sm:text-sm">
                     <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-sans text-sm">
-                        Terbuka untuk peluang karier profesional di bidang Production Engineering, Production Planning & Control (PPIC), Lean Manufacturing, atau diskusi seputar optimasi operasional manufaktur.
+                        Open to professional career opportunities in Production Engineering, Production Planning & Inventory Control (PPIC), Lean Manufacturing, or discussions on manufacturing operations optimization.
                     </p>
 
                     <div class="space-y-3">
@@ -400,20 +400,20 @@
                                 </a>
                             </div>
                             <a href="mailto:{{ $profile['email'] }}" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
-                                Kirim Email ↗
+                                Send Email ↗
                             </a>
                         </div>
 
                         <!-- WhatsApp / Phone -->
                         <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
                             <div>
-                                <p class="text-[10px] text-slate-400 uppercase">Telepon / WhatsApp</p>
+                                <p class="text-[10px] text-slate-400 uppercase">Phone / WhatsApp</p>
                                 <a href="{{ $profile['whatsapp'] }}" target="_blank" class="font-semibold text-slate-900 dark:text-white hover:text-emerald-500">
                                     {{ $profile['phone'] }}
                                 </a>
                             </div>
                             <a href="{{ $profile['whatsapp'] }}" target="_blank" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
-                                Chat WhatsApp ↗
+                                Chat on WhatsApp ↗
                             </a>
                         </div>
 
@@ -426,27 +426,27 @@
                                 </a>
                             </div>
                             <a href="{{ $profile['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
-                                Buka Profil ↗
+                                View Profile ↗
                             </a>
                         </div>
 
                         <!-- Portfolio Canva -->
                         <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
                             <div>
-                                <p class="text-[10px] text-slate-400 uppercase">Portofolio Canva</p>
+                                <p class="text-[10px] text-slate-400 uppercase">Canva Portfolio</p>
                                 <a href="{{ $profile['portfolio'] }}" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-900 dark:text-white hover:text-emerald-500">
                                     canva.link/portofolio-tamara-hanum-u
                                 </a>
                             </div>
                             <a href="{{ $profile['portfolio'] }}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 text-xs hover:underline">
-                                Buka Portofolio ↗
+                                View Portfolio ↗
                             </a>
                         </div>
 
                         <!-- Location -->
                         <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
                             <div>
-                                <p class="text-[10px] text-slate-400 uppercase">Domisili</p>
+                                <p class="text-[10px] text-slate-400 uppercase">Location</p>
                                 <p class="font-semibold text-slate-900 dark:text-white">
                                     {{ $profile['location'] }}
                                 </p>
@@ -467,12 +467,12 @@
                         
                         validate() {
                             if (!this.name.trim() || !this.email.trim() || !this.message.trim()) {
-                                this.error = 'Mohon lengkapi Nama, Email, dan Pesan terlebih dahulu.';
+                                this.error = 'Please fill in Name, Email, and Message.';
                                 return false;
                             }
                             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                             if (!emailRegex.test(this.email.trim())) {
-                                this.error = 'Mohon masukkan format email yang valid.';
+                                this.error = 'Please enter a valid email address.';
                                 return false;
                             }
                             this.error = '';
@@ -503,7 +503,7 @@
                             if (!this.validate()) return;
                             this.logToDatabase();
                             this.successNotice = true;
-                            const text = `Halo Tamara Hanum,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n(Dikirim melalui Portofolio Tamara Hanum)`;
+                            const text = `Hello Tamara Hanum,\n\nName: ${this.name}\nEmail: ${this.email}\n\nMessage:\n${this.message}\n\n(Sent via Tamara Hanum Portfolio Website)`;
                             const url = `https://wa.me/{{ $profile['phone_digits'] }}?text=${encodeURIComponent(text)}`;
                             window.open(url, '_blank');
                         },
@@ -512,8 +512,8 @@
                             if (!this.validate()) return;
                             this.logToDatabase();
                             this.successNotice = true;
-                            const subject = `Pesan Portofolio dari ${this.name}`;
-                            const body = `Halo Tamara Hanum,\n\nNama: ${this.name}\nEmail: ${this.email}\n\nPesan:\n${this.message}\n\n---\nDikirim melalui Portofolio Tamara Hanum`;
+                            const subject = `Portfolio Inquiry from ${this.name}`;
+                            const body = `Hello Tamara Hanum,\n\nName: ${this.name}\nEmail: ${this.email}\n\nMessage:\n${this.message}\n\n---\nSent via Tamara Hanum Portfolio Website`;
                             const mailtoUrl = `mailto:{{ $profile['email'] }}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                             window.location.href = mailtoUrl;
                         }
@@ -521,10 +521,10 @@
                     
                     <div class="space-y-1">
                         <h3 class="font-bold text-slate-900 dark:text-white text-sm">
-                            Kirim Pesan Langsung
+                            Send a Direct Message
                         </h3>
                         <p class="text-[11px] text-slate-500 dark:text-slate-400 font-sans">
-                            Tulis pesan Anda, lalu pilih ingin mengirim via WhatsApp atau Email resmi.
+                            Write your message, then choose to send directly via WhatsApp or official Email.
                         </p>
                     </div>
 
@@ -537,32 +537,32 @@
                     <template x-if="successNotice">
                         <div class="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs flex items-center gap-2">
                             <span>✓</span>
-                            <span>Aplikasi tujuan telah dibuka! Terima kasih telah menghubungi.</span>
+                            <span>Application opened! Thank you for getting in touch.</span>
                         </div>
                     </template>
 
                     <div class="space-y-3.5">
                         <div class="space-y-1">
-                            <label for="contact-name" class="block font-semibold text-slate-700 dark:text-slate-300">Nama Anda *</label>
-                            <input type="text" id="contact-name" x-model="name" placeholder="misal: Hendra Wijaya" 
+                            <label for="contact-name" class="block font-semibold text-slate-700 dark:text-slate-300">Your Name *</label>
+                            <input type="text" id="contact-name" x-model="name" placeholder="e.g. Alex Johnson" 
                                    class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500">
                         </div>
 
                         <div class="space-y-1">
-                            <label for="contact-email" class="block font-semibold text-slate-700 dark:text-slate-300">Email Anda *</label>
-                            <input type="email" id="contact-email" x-model="email" placeholder="hendra@company.com" 
+                            <label for="contact-email" class="block font-semibold text-slate-700 dark:text-slate-300">Your Email *</label>
+                            <input type="email" id="contact-email" x-model="email" placeholder="alex@company.com" 
                                    class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500">
                         </div>
 
                         <div class="space-y-1">
-                            <label for="contact-message" class="block font-semibold text-slate-700 dark:text-slate-300">Pesan / Diskusi *</label>
-                            <textarea id="contact-message" x-model="message" rows="3" placeholder="Tuliskan pesan, penawaran kerja sama, atau keperluan diskusi Anda..." 
+                            <label for="contact-message" class="block font-semibold text-slate-700 dark:text-slate-300">Message / Inquiry *</label>
+                            <textarea id="contact-message" x-model="message" rows="3" placeholder="Write your message, collaboration proposal, or inquiry here..." 
                                       class="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 resize-none"></textarea>
                         </div>
 
                         <div class="pt-2 space-y-2">
                             <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center font-mono">
-                                Pilih metode pengiriman:
+                                Choose delivery method:
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                                 <!-- WhatsApp Button -->
@@ -571,7 +571,7 @@
                                     <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
                                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                                     </svg>
-                                    <span>Kirim via WhatsApp</span>
+                                    <span>Send via WhatsApp</span>
                                 </button>
 
                                 <!-- Email Button -->
@@ -580,7 +580,7 @@
                                     <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                     </svg>
-                                    <span>Kirim via Email</span>
+                                    <span>Send via Email</span>
                                 </button>
                             </div>
                         </div>

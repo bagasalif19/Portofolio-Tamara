@@ -157,7 +157,7 @@
     <!-- Fixed Right Sidebar: Location Text (Desktop) -->
     <div class="fixed bottom-0 right-6 lg:right-12 hidden md:flex flex-col items-center gap-6 z-40">
         <div class="font-mono text-xs text-slate-500 dark:text-slate-400 tracking-wider hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors [writing-mode:vertical-rl] select-none">
-            📍 Temanggung, Jawa Tengah
+            📍 Temanggung, Central Java, Indonesia
         </div>
         <div class="w-[1px] h-24 bg-slate-300 dark:bg-slate-700"></div>
     </div>
@@ -181,18 +181,18 @@
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center gap-5 lg:gap-8 font-mono text-xs text-slate-700 dark:text-slate-300">
-                    <a href="#about" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Tentang</a>
-                    <a href="#experience" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pengalaman</a>
-                    <a href="#projects" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Proyek</a>
-                    <a href="#education" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Pendidikan & Sertifikasi</a>
-                    <a href="#contact" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontak</a>
+                    <a href="#about" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About</a>
+                    <a href="#experience" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Experience</a>
+                    <a href="#projects" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Projects</a>
+                    <a href="#education" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Education & Certifications</a>
+                    <a href="#contact" class="whitespace-nowrap hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
 
                     <!-- Resume / Portfolio Button -->
                     <a href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all font-semibold flex items-center gap-1.5 whitespace-nowrap shrink-0">
                         <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
-                        <span>Portofolio Canva ↗</span>
+                        <span>Canva Portfolio ↗</span>
                     </a>
 
                     <!-- Dark/Light Theme Toggle -->
@@ -237,14 +237,14 @@
 
         <!-- Mobile Drawer -->
         <div x-show="mobileMenuOpen" x-cloak class="md:hidden border-b border-slate-200 dark:border-slate-800 bg-[#f8fafc] dark:bg-[#0b1120] px-6 py-6 space-y-4 font-mono text-sm">
-            <a @click="mobileMenuOpen = false" href="#about" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Tentang</a>
-            <a @click="mobileMenuOpen = false" href="#experience" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Pengalaman</a>
-            <a @click="mobileMenuOpen = false" href="#projects" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Proyek</a>
-            <a @click="mobileMenuOpen = false" href="#education" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Pendidikan & Sertifikasi</a>
-            <a @click="mobileMenuOpen = false" href="#contact" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Kontak</a>
+            <a @click="mobileMenuOpen = false" href="#about" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">About</a>
+            <a @click="mobileMenuOpen = false" href="#experience" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Experience</a>
+            <a @click="mobileMenuOpen = false" href="#projects" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Projects</a>
+            <a @click="mobileMenuOpen = false" href="#education" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Education & Certifications</a>
+            <a @click="mobileMenuOpen = false" href="#contact" class="block py-1 hover:text-emerald-600 dark:hover:text-emerald-400">Contact</a>
             <div class="pt-2">
                 <a @click="mobileMenuOpen = false" href="https://canva.link/portofolio-tamara-hanum-u" target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-lg border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 font-semibold">
-                    📂 Buka Portofolio Canva ↗
+                    📂 View Canva Portfolio ↗
                 </a>
             </div>
         </div>
@@ -266,7 +266,7 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center font-mono text-xs text-slate-500 dark:text-slate-400 space-y-2">
-        <p>⚙️ Dirancang untuk <span class="text-slate-800 dark:text-slate-200 font-semibold">Tamara Hanum Ulinnuha, S.T.</span></p>
+        <p>⚙️ Designed for <span class="text-slate-800 dark:text-slate-200 font-semibold">Tamara Hanum Ulinnuha, S.T.</span></p>
         <p>Industrial Engineering & Operations Specialist · UII Alumna · Temanggung, Central Java, Indonesia</p>
     </footer>
 

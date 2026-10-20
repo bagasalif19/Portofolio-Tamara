@@ -114,7 +114,7 @@ class PortfolioController extends Controller
             [
                 'role' => 'Management Trainee – Production',
                 'company' => 'PT Shoenary Javanesia Inc (KMK Group)',
-                'period' => 'Okt 2025 – Sekarang',
+                'period' => 'Oct 2025 – Present',
                 'location' => 'Temanggung, Central Java',
                 'bullets' => [
                     'Planned manpower requirements across 12 production lines, aligning workforce capacity, line allocation, and production targets for 50–60 Purchase Orders (POs) per month.',
@@ -128,7 +128,7 @@ class PortfolioController extends Controller
             [
                 'role' => 'Production Engineering Intern',
                 'company' => 'PT Yamaha Indonesia',
-                'period' => 'Feb 2024 – Agu 2024',
+                'period' => 'Feb 2024 – Aug 2024',
                 'location' => 'East Jakarta, DKI Jakarta',
                 'bullets' => [
                     'Executed two Value Stream Mapping (VSM) and Kaizen projects to analyze end-to-end production flows and identify bottlenecks, non-value-added activities, and process inefficiencies.',
@@ -142,7 +142,7 @@ class PortfolioController extends Controller
             [
                 'role' => 'PPIC Intern (Production Planning & Inventory Control)',
                 'company' => 'CV Jodion Unggul Perkasa',
-                'period' => 'Okt 2023 – Nov 2023',
+                'period' => 'Oct 2023 – Nov 2023',
                 'location' => 'Yogyakarta, D.I. Yogyakarta',
                 'bullets' => [
                     'Assisted in developing periodic production schedules based on machine capacity constraints in a Make-to-Order (MTO) manufacturing environment.',
@@ -157,15 +157,15 @@ class PortfolioController extends Controller
                 'id' => 'sewing-manpower-planning',
                 'title' => 'High-Volume Sewing Manpower & Capacity Planning across 12 Lines',
                 'category' => 'Production Planning & Workforce Optimization',
-                'year' => '2025 – Sekarang',
+                'year' => '2025 – Present',
                 'image' => asset('images/project_manpower.jpg'),
-                'summary' => 'Perencanaan kapasitas tenaga kerja skala besar untuk 480 operator di 12 lini sewing demi pemenuhan 50–60 PO ekspor per bulan di PT Shoenary Javanesia Inc.',
-                'description' => 'Mengembangkan sistem perencanaan kebutuhan tenaga kerja dan pemetaan kapasitas lini sewing. Menyelaraskan alokasi operator dengan tingkat kesulitan model sepatu, menyusun laporan persiapan produksi harian, memantau deviasi performa vs jadwal master ekspor secara real-time, serta menyusun pelaporan berkala BOD, BOL, dan COO dengan analisis gap dan tindakan perbaikan terstruktur.',
+                'summary' => 'Large-scale workforce capacity planning for ~480 operators across 12 sewing lines to fulfill 50–60 export Purchase Orders (POs) per month at PT Shoenary Javanesia Inc.',
+                'description' => 'Developed manpower requirement planning and capacity mapping systems across 12 sewing lines. Aligned operator allocation with footwear model complexity, prepared daily production preparation reports, monitored real-time performance deviations against the master export schedule, and prepared periodic BOD, BOL, and COO executive reports featuring structured gap analyses and corrective action plans.',
                 'metrics' => [
-                    ['label' => 'Operator Terkelola', 'val' => '~480 Sewing Operators'],
-                    ['label' => 'Lini Produksi', 'val' => '12 Production Lines'],
-                    ['label' => 'Target PO Ekspor', 'val' => '50–60 PO / Bulan'],
-                    ['label' => 'Pelaporan Eksekutif', 'val' => 'BOD, BOL, COO'],
+                    ['label' => 'Managed Operators', 'val' => '~480 Sewing Operators'],
+                    ['label' => 'Production Lines', 'val' => '12 Production Lines'],
+                    ['label' => 'Monthly Export POs', 'val' => '50–60 POs / Month'],
+                    ['label' => 'Executive Reporting', 'val' => 'BOD, BOL, COO'],
                 ],
                 'tech' => ['SAP PP / MM', 'Manpower Planning', 'Capacity Analysis', 'Line Allocation', 'Executive Reporting', 'Advanced Excel'],
                 'icon' => '🏭',
@@ -176,70 +176,40 @@ class PortfolioController extends Controller
                 'category' => 'Lean Manufacturing & Process Improvement',
                 'year' => '2024',
                 'image' => asset('images/project_vsm.jpg'),
-                'summary' => 'Proyek optimasi aliran proses produksi end-to-end untuk eliminasi pemborosan, memangkas lead time, dan meningkatkan line balance di PT Yamaha Indonesia.',
-                'description' => 'Menganalisis alur nilai proses manufaktur dari penerimaan material hingga perakitan akhir menggunakan Value Stream Mapping (VSM). Melakukan time study ST Net, menata ulang tata letak stasiun kerja untuk memperpendek jarak transfer material, serta meredistribusi elemen kerja antar operator. Berhasil menaikkan produktivitas lini sebesar 15%, mereduksi lead time dari 2.14 menjadi 0.75, menurunkan WIP inventory dari 627 ke 370 unit, dan meningkatkan line balance dari 96% ke 98%.',
+                'summary' => 'Analyzed end-to-end manufacturing flows using VSM and conducted standard time studies to eliminate bottlenecks and optimize line balancing.',
+                'description' => 'Analyzed end-to-end manufacturing flows using Value Stream Mapping (VSM) and conducted standard time studies to identify bottlenecks, non-value-added activities, and process inefficiencies. Redesigned workstation layouts and optimized operator task allocation through line balancing and Kaizen initiatives. Achieved a 15% productivity increase, reduced manufacturing lead time from 2.14 to 0.75, decreased WIP inventory from 627 to 370 units, and improved line balancing efficiency from 96% to 98%.',
                 'metrics' => [
-                    ['label' => 'Peningkatan Produktivitas', 'val' => '+15%'],
-                    ['label' => 'Reduksi Lead Time', 'val' => '2.14 → 0.75'],
-                    ['label' => 'Reduksi WIP Inventory', 'val' => '627 → 370'],
-                    ['label' => 'Line Balance', 'val' => '96% → 98%'],
+                    ['label' => 'Productivity Improvement', 'val' => '+15%'],
+                    ['label' => 'Lead Time Reduction', 'val' => '2.14 → 0.75'],
+                    ['label' => 'WIP Inventory Reduction', 'val' => '627 → 370 Units'],
+                    ['label' => 'Line Balancing Efficiency', 'val' => '96% → 98%'],
                 ],
-                'tech' => ['Value Stream Mapping (VSM)', 'Kaizen', 'Standard Time (ST Net)', 'Line Balancing', 'Workstation Layout', 'Advanced Excel'],
+                'tech' => ['Value Stream Mapping (VSM)', 'Kaizen', 'Standard Time Study (ST Net)', 'Line Balancing', 'Workstation Layout', 'Advanced Excel'],
                 'icon' => '📈',
             ],
             [
                 'id' => 'spc-fmea-quality',
-                'title' => 'Quality Control Analysis & Rework Reduction using SPC, FMEA & Kaizen',
+                'title' => 'Quality Control Analysis & Rework Reduction Using SPC, FMEA & Kaizen',
                 'category' => 'Quality Engineering & Statistical Analysis',
                 'year' => '2024',
                 'image' => asset('images/project_spc.jpg'),
-                'summary' => 'Analisis komprehensif pengendalian kualitas suku cadang manufaktur untuk mereduksi tingkat cacat (rework) dan meningkatkan produktivitas.',
-                'description' => 'Riset proyek akhir sarjana mengintegrasikan Statistical Process Control (SPC), Failure Mode and Effects Analysis (FMEA), serta Kaizen. Memetakan variabilitas proses dengan control charts (p-chart, X-bar R), menentukan Risk Priority Number (RPN) pada proses kritis, dan mengurai akar masalah menggunakan diagram Fishbone dan 5 Whys. Menghasilkan penurunan tingkat rework sebesar 19.67% dan peningkatan produktivitas manufaktur sebesar 15.00%.',
+                'summary' => 'Final-year undergraduate research applying SPC, FMEA, and Kaizen to analyze process variability, mitigate risks, and reduce rework in manufacturing.',
+                'description' => 'Conducted a final-year undergraduate research project focused on Statistical Process Control (SPC), Failure Mode and Effects Analysis (FMEA), and Kaizen. Analyzed production variability using control charts, identified critical defects through Pareto analysis, assessed process risks using FMEA, and investigated root causes using Fishbone Diagrams and the 5 Whys method. Achieved a 19.67% reduction in rework and a 15.00% improvement in manufacturing productivity.',
                 'metrics' => [
-                    ['label' => 'Reduksi Rework', 'val' => '-19.67%'],
-                    ['label' => 'Peningkatan Produktivitas', 'val' => '+15.00%'],
-                    ['label' => 'Peta Kendali', 'val' => 'SPC Charts'],
-                    ['label' => 'Manajemen Risiko', 'val' => 'FMEA & RPN'],
+                    ['label' => 'Rework Reduction', 'val' => '-19.67%'],
+                    ['label' => 'Productivity Improvement', 'val' => '+15.00%'],
+                    ['label' => 'Quality Control Monitoring', 'val' => 'SPC Charts'],
+                    ['label' => 'Risk Assessment', 'val' => 'FMEA & RPN'],
                 ],
-                'tech' => ['Statistical Process Control (SPC)', 'FMEA', 'Root Cause Analysis', '5 Whys', 'Fishbone Analysis', 'SPSS / Minitab'],
+                'tech' => ['Statistical Process Control (SPC)', 'FMEA', 'Root Cause Analysis', '5 Whys', 'Fishbone Analysis'],
                 'icon' => '🎯',
-            ],
-            [
-                'id' => 'flexsim-layout-simulation',
-                'title' => '3D Plant Layout Simulation & Manufacturing Bottleneck Elimination',
-                'category' => 'Modeling & Simulation',
-                'year' => '2023 – 2024',
-                'image' => null,
-                'summary' => 'Pemodelan digital 3D aliran stasiun kerja dan simulasi tata letak fasilitas untuk eliminasi bottleneck dan peningkatan throughput.',
-                'description' => 'Membangun simulasi aliran material diskrit menggunakan FlexSim untuk menguji berbagai skenario perubahan tata letak lini kerja tanpa mengganggu operasional riil. Didukung perancangan 3D CAD stasiun kerja ergonomis menggunakan SolidWorks dan Fusion 360.',
-                'metrics' => [
-                    ['label' => 'Simulasi Diskrit', 'val' => 'FlexSim 3D'],
-                    ['label' => 'Desain CAD', 'val' => 'SolidWorks & Fusion 360'],
-                ],
-                'tech' => ['FlexSim', 'SolidWorks', 'Fusion 360', 'Plant Layout Optimization', 'Ergonomics'],
-                'icon' => '🖥️',
-            ],
-            [
-                'id' => 'mto-machine-scheduling',
-                'title' => 'Make-to-Order (MTO) Machine Capacity Constrained Scheduling',
-                'category' => 'PPIC & Operations Scheduling',
-                'year' => '2023',
-                'image' => null,
-                'summary' => 'Perancangan jadwal produksi adaptif dengan memperhitungkan keterbatasan kapasitas mesin pada sistem manufaktur Make-to-Order di CV Jodion Unggul Perkasa.',
-                'description' => 'Memetakan alur utilisasi mesin dan kapasitas stasiun kerja kritis untuk meminimalkan waktu tunggu dan keterlambatan pesanan. Menyusun urutan pengerjaan pesanan berbasis kendala kapasitas dan memantau output harian guna menjaga pemenuhan delivery date pelanggan.',
-                'metrics' => [
-                    ['label' => 'Tipe Sistem', 'val' => 'Make-to-Order (MTO)'],
-                    ['label' => 'Fokus Optimasi', 'val' => 'Machine Capacity Constraints'],
-                ],
-                'tech' => ['PPIC', 'Capacity Planning', 'Production Scheduling', 'MTO Flow', 'Work Order Tracking'],
-                'icon' => '⚙️',
             ],
         ];
 
         $education = [
             'degree' => 'Bachelor of Engineering in Industrial Engineering (S.T.)',
             'institution' => 'Universitas Islam Indonesia (UII) — Yogyakarta',
-            'period' => 'Agu 2020 – Sep 2024',
+            'period' => 'Aug 2020 – Sep 2024',
             'gpa' => '3.80 / 4.00',
             'final_project' => 'Quality Control Analysis of Product Parts in a Manufacturing Company using SPC, FMEA, and Kaizen; reduced rework by 19.67% and increased manufacturing productivity by 15.00%.',
         ];
@@ -248,13 +218,13 @@ class PortfolioController extends Controller
             [
                 'title' => 'Quality Control Analysis: SPC, FMEA & Kaizen Specialist',
                 'issuer' => 'Universitas Islam Indonesia',
-                'credential' => 'Pengendalian Kualitas Statistik, Identifikasi Risiko FMEA, dan Kaizen Manufaktur',
+                'credential' => 'Statistical Process Control, FMEA Risk Identification, and Manufacturing Kaizen',
                 'date' => '2024',
                 'verified' => true,
             ],
             [
                 'title' => 'Advanced Manufacturing Tools & Enterprise Systems',
-                'issuer' => 'Laboratorium Teknik Industri & Pelatihan Terkait',
+                'issuer' => 'Industrial Engineering Laboratory & Professional Training',
                 'credential' => 'SAP PP/MM, FlexSim 3D Simulation, SPSS Statistics, SolidWorks & Fusion 360',
                 'date' => '2023 – 2024',
                 'verified' => true,
@@ -263,16 +233,16 @@ class PortfolioController extends Controller
 
         $organizations = [
             [
-                'role' => 'Asisten Laboratorium Fisika Dasar',
+                'role' => 'Basic Physics Laboratory Teaching Assistant',
                 'org' => 'Universitas Islam Indonesia',
                 'period' => 'Sep 2023 – Jan 2024',
-                'description' => 'Membimbing praktikum mahasiswa dalam eksperimen mekanika, kelistrikan, dan optik, validasi data numerik, serta evaluasi laporan teknis mahasiswa.',
+                'description' => 'Guided undergraduate lab practicums in mechanics, electricity, and optics; validated numerical datasets and evaluated technical engineering laboratory reports.',
             ],
             [
-                'role' => 'Wakil Bendahara Umum (Deputy General Treasurer)',
-                'org' => 'LEM FTI UII (Lembaga Eksekutif Mahasiswa)',
+                'role' => 'Deputy General Treasurer',
+                'org' => 'LEM FTI UII (Faculty Student Executive Board)',
                 'period' => 'Jul 2023 – Jan 2024',
-                'description' => 'Mengelola alokasi anggaran, perencanaan arus kas keuangan organisasi mahasiswa fakultas, transparansi pendanaan, dan audit pertanggungjawaban program kerja.',
+                'description' => 'Managed budget allocation, financial cash flow planning for the faculty student council, fund transparency, and accountability audits for executive work programs.',
             ],
         ];
 
@@ -301,10 +271,10 @@ class PortfolioController extends Controller
         if ($request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'message' => 'Pesan Anda berhasil dikirim! Terima kasih, saya akan segera menghubungi Anda.',
+                'message' => 'Your message has been sent successfully! Thank you, I will get back to you shortly.',
             ]);
         }
 
-        return back()->with('success', 'Pesan Anda berhasil dikirim! Terima kasih, saya akan segera menghubungi Anda.');
+        return back()->with('success', 'Your message has been sent successfully! Thank you, I will get back to you shortly.');
     }
 }
