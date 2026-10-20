@@ -59,9 +59,9 @@ class PortfolioController extends Controller
 
         $about = [
             'paragraphs' => [
-                'Saya adalah lulusan Teknik Industri dari Universitas Islam Indonesia (IPK 3.80/4.00) dengan keahlian mendalam di bidang Production Engineering, Production Planning & Inventory Control (PPIC), serta Continuous Improvement (Lean Manufacturing).',
-                'Saat ini, saya berkarier sebagai Management Trainee – Production di PT Shoenary Javanesia Inc (KMK Group), bertanggung jawab merencanakan kebutuhan manpower untuk ~480 operator jahit di 12 lini produksi, menyelaraskan alokasi lini dan kapasitas produksi untuk 50–60 Purchase Order ekspor per bulan, serta menyusun pelaporan performa berkala untuk dewan direksi (BOD, BOL, dan COO).',
-                'Sebelumnya di PT Yamaha Indonesia, saya memimpin 2 proyek Value Stream Mapping (VSM) dan Kaizen yang sukses menghasilkan peningkatan produktivitas 15%, reduksi manufacturing lead time dari 2.14 menjadi 0.75, penurunan persediaan WIP dari 627 menjadi 370 unit, dan peningkatan efisiensi line balance dari 96% ke 98%.',
+                'I am an Industrial Engineering graduate from Universitas Islam Indonesia with a GPA of 3.80/4.00, specializing in Production Engineering, Production Planning and Inventory Control (PPIC), and Continuous Improvement (Lean Manufacturing).',
+                'I am currently working as a Management Trainee – Production at PT Shoenary Javanesia Inc. (KMK Group), where I am responsible for manpower mapping for approximately 480 sewing operators across 12 production lines, aligning line allocation and production capacity for 50–60 export Purchase Orders per month, and preparing periodic performance reports for senior management, including BOD, BOL, and COO reports.',
+                'Previously, at PT Yamaha Indonesia, I led two Value Stream Mapping (VSM) and Kaizen projects, achieving a 15% increase in productivity, reducing manufacturing lead time from 2.14 to 0.75, decreasing work-in-process (WIP) inventory from 627 to 370 units, and improving line balancing efficiency from 96% to 98%.',
             ],
             'hard_skills' => [
                 'Production Engineering & Manufacturing' => [
